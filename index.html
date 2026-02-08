@@ -2,199 +2,228 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Toslim Saheb – Excel Freelancer Portfolio</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toslim Saheb | Excel & Data Analyst</title>
+
 <style>
-  :root {
-    --primary:#2c3e50;
-    --accent:#27ae60;
-    --bg:#f5f5f5;
-    --text:#333;
-    --radius:8px;
-    --spacing:1rem;
-  }
-  *{box-sizing:border-box;margin:0;padding:0;}
-  body{
-    font-family:Arial,sans-serif;
-    background:var(--bg);
-    color:var(--text);
-    line-height:1.6;
-    display:flex;
-    flex-direction:column;
-    min-height:100vh;
-  }
-  header{
-    background:var(--primary);
-    color:#fff;
-    padding:var(--spacing);
-    text-align:center;
-  }
-  header h1{font-size:2rem;margin-bottom:.5rem;}
-  nav{
-    display:flex;
-    justify-content:center;
-    gap:var(--spacing);
-    margin-top:.5rem;
-  }
-  nav a{
-    color:#fff;
-    text-decoration:none;
-    font-weight:bold;
-  }
-  main{
-    flex:1;
-    max-width:1200px;
-    margin:auto;
-    padding:var(--spacing);
-    width:100%;
-  }
-  section{
-    margin-bottom:2rem;
-  }
-  .about, .services, .portfolio, .contact{
-    background:#fff;
-    padding:var(--spacing);
-    border-radius:var(--radius);
-    box-shadow:0 2px 5px rgba(0,0,0,0.1);
-  }
-  .about h2, .services h2, .portfolio h2, .contact h2{
-    margin-bottom:.5rem;
-    color:var(--primary);
-  }
-  .services ul{
-    list-style:none;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:var(--spacing);
-  }
-  .services li{
-    background:var(--accent);
-    color:#fff;
-    padding:var(--spacing);
-    border-radius:var(--radius);
-    display:flex;
-    align-items:center;
-    gap:.5rem;
-  }
-  .portfolio .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-    gap:var(--spacing);
-  }
-  .portfolio .item{
-    background:#eaeaea;
-    border-radius:var(--radius);
-    padding:var(--spacing);
-    text-align:center;
-    font-size:1.5rem;
-  }
-  .contact form{
-    display:flex;
-    flex-direction:column;
-    gap:.5rem;
-  }
-  .contact input, .contact textarea{
-    padding:.5rem;
-    border:1px solid #ccc;
-    border-radius:var(--radius);
-    font:inherit;
-  }
-  .contact button{
-    background:var(--accent);
-    color:#fff;
-    border:none;
-    padding:.75rem;
-    border-radius:var(--radius);
-    cursor:pointer;
-    font-weight:bold;
-  }
-  .contact button:hover{
-    background:#1e8449;
-  }
-  footer{
-    background:var(--primary);
-    color:#fff;
-    text-align:center;
-    padding:var(--spacing);
-    font-size:.9rem;
-  }
-  @media (max-width:600px){
-    header h1{font-size:1.5rem;}
-    nav{flex-direction:column;}
-  }
+:root{
+  --dark:#0f172a;
+  --light:#f8fafc;
+  --accent:#22c55e;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  background:var(--dark);
+  color:var(--light);
+  line-height:1.6;
+}
+
+/* HEADER */
+header{
+  padding:20px;
+  text-align:center;
+  background:#111827;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+nav{
+  margin-top:10px;
+}
+
+nav a{
+  color:white;
+  margin:0 10px;
+  text-decoration:none;
+  font-weight:bold;
+  transition:.3s;
+}
+
+nav a:hover{
+  color:var(--accent);
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:60px 20px;
+}
+
+.hero h1{
+  font-size:2.5rem;
+}
+
+.hero p{
+  margin:15px 0;
+  font-size:1.1rem;
+  opacity:.9;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:15px;
+  padding:12px 20px;
+  background:var(--accent);
+  color:white;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:bold;
+  transition:transform .2s, box-shadow .2s;
+}
+
+.btn:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 15px var(--accent);
+}
+
+/* SECTION */
+section{
+  max-width:1100px;
+  margin:40px auto;
+  padding:20px;
+}
+
+/* CARDS */
+.card{
+  background:#1e293b;
+  padding:20px;
+  border-radius:10px;
+  margin-top:15px;
+  transition:transform .3s, background .3s;
+  cursor:pointer;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  background:#263449;
+}
+
+/* SERVICES */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:15px;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  background:#111827;
+  margin-top:40px;
+}
+
+/* CLICK ANIMATION */
+.pop{
+  animation:pop .3s ease;
+}
+
+@keyframes pop{
+  50%{transform:scale(1.08);}
+}
 </style>
 </head>
+
 <body>
+
 <header>
-  <h1>Toslim Saheb</h1>
-  <p>📊 Excel Freelancer</p>
+  <h2>Toslim Saheb</h2>
   <nav>
     <a href="#about">About</a>
     <a href="#services">Services</a>
-    <a href="#portfolio">Portfolio</a>
+    <a href="#certificate">Certificate</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
-<main>
-  <section id="about" class="about">
-    <h2>About Me</h2>
-    <p>Hello! I'm Toslim Saheb, a dedicated Excel freelancer with a passion for turning raw data into actionable insights. I specialize in data analysis, automation with VBA, dashboard creation, and spreadsheet optimization.</p>
-  </section>
+<!-- HERO -->
+<section class="hero">
+  <h1>I turn Excel Data into Business Decisions 📊</h1>
+  <p>Freelance Excel & Data Analyst helping clients with dashboards, reports and automation.</p>
+  <a href="#contact" class="btn">Hire Me</a>
+</section>
 
-  <section id="services" class="services">
-    <h2>What I Offer</h2>
-    <ul>
-      <li>📈 Data Analysis & Reporting</li>
-      <li>⚙️ VBA Automation & Macros</li>
-      <li>📊 Interactive Dashboards</li>
-      <li>🧹 Spreadsheet Clean‑up & Optimization</li>
-      <li>📁 Data Import/Export Solutions</li>
-      <li>🧮 Financial Modeling</li>
-    </ul>
-  </section>
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Me</h2>
+  <div class="card clickable">
+    I am Toslim Saheb from India.  
+    I specialize in Excel data analysis, cleaning, reporting, dashboard creation and automation.  
+    My goal is to deliver accurate, fast and business-ready solutions for clients worldwide.
+  </div>
+</section>
 
-  <section id="portfolio" class="portfolio">
-    <h2>Portfolio Samples</h2>
-    <div class="grid">
-      <div class="item">📁 Sample 1</div>
-      <div class="item">📁 Sample 2</div>
-      <div class="item">📁 Sample 3</div>
-      <div class="item">📁 Sample 4</div>
-      <div class="item">📁 Sample 5</div>
-      <div class="item">📁 Sample 6</div>
-    </div>
-    <p style="margin-top:.5rem;font-size:.9rem;">(Click on a sample to view details – placeholder for real work)</p>
-  </section>
+<!-- SERVICES -->
+<section id="services">
+  <h2>Services</h2>
+  <div class="grid">
+    <div class="card clickable">📈 Data Analysis & Reports</div>
+    <div class="card clickable">📊 Interactive Dashboards</div>
+    <div class="card clickable">⚙️ VBA & Automation</div>
+    <div class="card clickable">🧹 Data Cleaning</div>
+    <div class="card clickable">📁 Import / Export</div>
+    <div class="card clickable">🧮 Financial Models</div>
+  </div>
+</section>
 
-  <section id="contact" class="contact">
-    <h2>Get In Touch</h2>
-    <form id="contactForm">
-      <input type="text" id="name" placeholder="Your Name" required>
-      <input type="email" id="email" placeholder="Your Email" required>
-      <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message ✉️</button>
-    </form>
-  </section>
-</main>
+<!-- CERTIFICATE -->
+<section id="certificate">
+  <h2>Certification</h2>
+
+  <div class="card">
+    🎓 NBCE – Course Code: ADA0110
+    <br><br>
+
+    <a href="certificate.jpg" target="_blank">
+      <img src="certificate.jpg" 
+           alt="NBCE Certificate"
+           style="width:100%; max-width:300px; border-radius:10px;">
+    </a>
+
+    <p style="margin-top:10px;font-size:14px;">
+      Click image to view full certificate
+    </p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact Me</h2>
+  <div class="card">
+    📧 primedexter12@gmail.com
+    <br><br>
+    <a class="btn" href="https://wa.me/919547434316" target="_blank">
+      Chat on WhatsApp
+    </a>
+    <br><br>
+    <a class="btn" href="resume.pdf" target="_blank">
+      Download Resume
+    </a>
+  </div>
+</section>
 
 <footer>
-  © 2026 Toslim Saheb | All rights reserved.
+  © 2026 Toslim Saheb | Excel Freelancer
 </footer>
 
 <script>
-document.getElementById('contactForm').addEventListener('submit',function(e){
-  e.preventDefault();
-  const name=document.getElementById('name').value.trim();
-  const email=document.getElementById('email').value.trim();
-  const message=document.getElementById('message').value.trim();
-  if(name && email && message){
-    alert('Thank you, '+name+'! Your message has been received.');
-    this.reset();
-  }else{
-    alert('Please fill in all fields.');
-  }
+/* click animation */
+document.querySelectorAll('.clickable').forEach(item=>{
+  item.addEventListener('click',()=>{
+    item.classList.add('pop');
+    setTimeout(()=>item.classList.remove('pop'),300);
+  });
 });
 </script>
+
 </body>
 </html>
