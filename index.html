@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Toslim Saheb – Excel Freelancer Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root {
+    --primary:#2c3e50;
+    --accent:#27ae60;
+    --bg:#f5f5f5;
+    --text:#333;
+    --radius:8px;
+    --spacing:1rem;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:Arial,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+  }
+  header{
+    background:var(--primary);
+    color:#fff;
+    padding:var(--spacing);
+    text-align:center;
+  }
+  header h1{font-size:2rem;margin-bottom:.5rem;}
+  nav{
+    display:flex;
+    justify-content:center;
+    gap:var(--spacing);
+    margin-top:.5rem;
+  }
+  nav a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:bold;
+  }
+  main{
+    flex:1;
+    max-width:1200px;
+    margin:auto;
+    padding:var(--spacing);
+    width:100%;
+  }
+  section{
+    margin-bottom:2rem;
+  }
+  .about, .services, .portfolio, .contact{
+    background:#fff;
+    padding:var(--spacing);
+    border-radius:var(--radius);
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+  }
+  .about h2, .services h2, .portfolio h2, .contact h2{
+    margin-bottom:.5rem;
+    color:var(--primary);
+  }
+  .services ul{
+    list-style:none;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:var(--spacing);
+  }
+  .services li{
+    background:var(--accent);
+    color:#fff;
+    padding:var(--spacing);
+    border-radius:var(--radius);
+    display:flex;
+    align-items:center;
+    gap:.5rem;
+  }
+  .portfolio .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:var(--spacing);
+  }
+  .portfolio .item{
+    background:#eaeaea;
+    border-radius:var(--radius);
+    padding:var(--spacing);
+    text-align:center;
+    font-size:1.5rem;
+  }
+  .contact form{
+    display:flex;
+    flex-direction:column;
+    gap:.5rem;
+  }
+  .contact input, .contact textarea{
+    padding:.5rem;
+    border:1px solid #ccc;
+    border-radius:var(--radius);
+    font:inherit;
+  }
+  .contact button{
+    background:var(--accent);
+    color:#fff;
+    border:none;
+    padding:.75rem;
+    border-radius:var(--radius);
+    cursor:pointer;
+    font-weight:bold;
+  }
+  .contact button:hover{
+    background:#1e8449;
+  }
+  footer{
+    background:var(--primary);
+    color:#fff;
+    text-align:center;
+    padding:var(--spacing);
+    font-size:.9rem;
+  }
+  @media (max-width:600px){
+    header h1{font-size:1.5rem;}
+    nav{flex-direction:column;}
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Toslim Saheb</h1>
+  <p>📊 Excel Freelancer</p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm Toslim Saheb, a dedicated Excel freelancer with a passion for turning raw data into actionable insights. I specialize in data analysis, automation with VBA, dashboard creation, and spreadsheet optimization.</p>
+  </section>
+
+  <section id="services" class="services">
+    <h2>What I Offer</h2>
+    <ul>
+      <li>📈 Data Analysis & Reporting</li>
+      <li>⚙️ VBA Automation & Macros</li>
+      <li>📊 Interactive Dashboards</li>
+      <li>🧹 Spreadsheet Clean‑up & Optimization</li>
+      <li>📁 Data Import/Export Solutions</li>
+      <li>🧮 Financial Modeling</li>
+    </ul>
+  </section>
+
+  <section id="portfolio" class="portfolio">
+    <h2>Portfolio Samples</h2>
+    <div class="grid">
+      <div class="item">📁 Sample 1</div>
+      <div class="item">📁 Sample 2</div>
+      <div class="item">📁 Sample 3</div>
+      <div class="item">📁 Sample 4</div>
+      <div class="item">📁 Sample 5</div>
+      <div class="item">📁 Sample 6</div>
+    </div>
+    <p style="margin-top:.5rem;font-size:.9rem;">(Click on a sample to view details – placeholder for real work)</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Get In Touch</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message ✉️</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  © 2026 Toslim Saheb | All rights reserved.
+</footer>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  const name=document.getElementById('name').value.trim();
+  const email=document.getElementById('email').value.trim();
+  const message=document.getElementById('message').value.trim();
+  if(name && email && message){
+    alert('Thank you, '+name+'! Your message has been received.');
+    this.reset();
+  }else{
+    alert('Please fill in all fields.');
+  }
+});
+</script>
+</body>
+</html>
